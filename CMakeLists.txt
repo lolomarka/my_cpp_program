@@ -19,7 +19,7 @@ set(PROJECT_SOURCES
         mainwindow.ui
 )
 
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+if(${QT_VERSION_MAJOR} GREATER_EQUAL 5)
     qt_add_executable(my_cpp_program
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
@@ -65,6 +65,6 @@ install(TARGETS my_cpp_program
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-if(QT_VERSION_MAJOR EQUAL 6)
+if(QT_VERSION_MAJOR EQUAL 5)
     qt_finalize_executable(my_cpp_program)
 endif()
